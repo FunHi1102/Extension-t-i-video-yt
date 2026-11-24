@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YT Quality Downloader</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>YT Downloader</span>
+      </div>
+      <span id="bridge-status" class="badge badge-checking">Checking bridge...</span>
+    </header>
+
+    <main id="main-content">
+      <div id="state-message" class="message-box">
+        Đang kiểm tra tab hiện tại...
+      </div>
+
+      <section id="video-panel" class="hidden">
+        <div class="video-card">
+          <img id="video-thumb" alt="Thumbnail" />
+          <div class="video-meta">
+            <h2 id="video-title"></h2>
+            <p id="video-channel"></p>
+          </div>
+        </div>
+
+        <label class="field-label" for="quality-select">Chọn chất lượng tải về</label>
+        <select id="quality-select" class="select-input"></select>
+
+        <button id="download-btn" class="primary-btn" type="button">
+          Tải xuống ngay
+        </button>
+
+        <div id="progress-wrap" class="progress-wrap hidden">
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+          <p id="progress-text" class="progress-text">Đang chuẩn bị...</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
